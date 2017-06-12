@@ -32,15 +32,15 @@ ZoomImages.prototype = {
              this.height = window.innerHeight - 42;
              this.width = this.height * wh;
            }
-           
+
            _this.elemArr[0].style.left = (window.innerWidth - this.width - 42) / 2 + 'px';
            _this.elemArr[0].style.top = (window.innerHeight - this.height - 42) / 2 + 'px';
            document.body.appendChild(_this.elemArr[0]);
            document.body.appendChild(_this.elemArr[4]);
-           _this.elemArr[0].style.transform = "scale(0.5, 0.5)"
-           setTimeout(function(){
-             _this.elemArr[0].style.transform = "scale(1, 1)"
-           }, 20);
+           _this.elemArr[0].style.animation = "animateIn 0.4s";
+          //  setTimeout(function(){
+          //    _this.elemArr[0].style.transform = "scale(1, 1)"
+          //  }, 20);
 
          }
 

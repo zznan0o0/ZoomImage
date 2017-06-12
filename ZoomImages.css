@@ -43,3 +43,13 @@
     font-size: 3vw;
   }
 }
+
+@keyframes animateIn {
+  0%{
+    transform: scale(0.5, 0.5);
+  }
+
+  100%{
+    transform: scale(1, 1);
+  }
+}
