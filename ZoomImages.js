@@ -44,9 +44,19 @@ ZoomImages.prototype = {
 
          }
 
+         function preventDefault(e){
+          e.preventDefault();
+         }
+
+         document.body.addEventListener('touchmove', preventDefault);
+         document.body.addEventListener('mousewheel', preventDefault);
+         document.body.style['overflow-y'] = 'hidden';
          _this.elemArr[2].onclick = null;
          _this.elemArr[2].onclick = function(){
            _this.elemArr[2].onclick = null;
+           document.body.removeEventListener('touchmove', preventDefault);
+           document.body.removeEventListener('mousewheel', preventDefault);
+           document.body.style['overflow-y'] = 'auto';
            document.body.removeChild(_this.elemArr[0]);
            document.body.removeChild(_this.elemArr[4]);
          }
